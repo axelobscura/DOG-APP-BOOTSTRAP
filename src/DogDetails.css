@@ -1,3 +1,14 @@
 .DogDetails img {
   width: 100%;
 }
+.DogDetails-card {
+  box-shadow: 0 0 10px #000;
+}
+.DogDetails-card img {
+  filter: grayscale();
+  transition: all 1s;
+  box-shadow: 0 0 10px #000;
+}
+.DogDetails-card:hover img {
+  filter: none;
+}

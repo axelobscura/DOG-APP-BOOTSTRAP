@@ -10,12 +10,12 @@ class DogList extends Component {
   render() { 
     return (
       <div className="DogList">
-        <h1 className="display-1 text-center">DOG LIST</h1>
+        <h1 className="display-1 text-center mt-4 mb-4">DOG LIST</h1>
           <div className="row">
             {this.props.dogs.map(d => (
-              <div className="col-lg-4 text-center" key={d.name}>
+              <div className="Dog col-lg-4 text-center Dog" key={d.name}>
                 <img src={d.src} alt=""/>
-                <Link exact to={`/dogs/${d.name}`}><h3>{d.name}</h3></Link>
+                <Link className="underline" exact to={`/dogs/${d.name}`}><h3>{d.name}</h3></Link>
               </div>
             ))}
           </div>

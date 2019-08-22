@@ -6,6 +6,7 @@ import whiskey from './images/whiskey.jpg';
 import hazel from './images/hazel.jpg';
 import sham from './images/sham.jpg';
 import './App.css';
+import NavBar from './NavBar';
 
 class App extends Component {
   static defaultProps = {
@@ -52,6 +53,7 @@ class App extends Component {
     }
     return (
       <div>
+        <NavBar dogs={this.props.dogs} />
         <Switch>
           <Route exact path='/dogs' render={() => <DogList dogs={this.props.dogs}/>} />
           <Route exact path='/dogs/:name' render={getDog} />
